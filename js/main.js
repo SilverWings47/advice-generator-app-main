@@ -1,4 +1,4 @@
-// getAdvice();
+getAdvice();
 
 const adviceBtn = document.querySelector('.advice-btn');
 const adviceId = document.querySelector('.advice-id');
