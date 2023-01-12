@@ -1,0 +1,99 @@
+@import 'reset';
+@import 'config';
+
+body {
+    font-family: $ff-primary;
+    background-color: $clr-neutral-700;
+
+    @include flexCenter {
+        flex-direction: column;
+    }
+}
+
+.advice-container {
+    background-color: $clr-neutral-400;
+    width: 92%;
+    max-width: 31rem;
+    text-align: center;
+    padding-block: 2rem 4rem;
+    border-radius: 10px;
+    position: relative;
+
+    @include desktop {
+        min-width: 5rem;
+        min-height: 250px;
+    }
+
+    .advice-id {
+        color: $clr-secondary;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: .75rem;
+    }
+
+    .advice-text {
+        color: $clr-primary;
+        font-size: 1.5rem;
+        padding-block: 1.5rem;
+        padding-inline: 1.5rem;
+        font-weight: 400;
+
+        @include desktop {
+            font-size: 1.6rem;
+            padding-inline: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .advice-divider {
+        height: 20px;
+        background-image: url('../images/pattern-divider-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include desktop {
+            background-image: url('../images/pattern-divider-desktop.svg');
+            max-width: 80%;
+            margin-inline: auto;
+            margin-top: 1rem;
+        }
+    }
+
+    .advice-btn {
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        border: none;
+        border-radius: 50%;
+        background-color: $clr-secondary;
+        background-image: url('../images/icon-dice.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 35%;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+        @include desktop {
+            width: 60px;
+            height: 60px;
+            background-size: 40%;
+
+            &:is(:hover) {
+                box-shadow: 0px 0px 30px 1px rgba(82,255,169,0.75);
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+
+    a {
+        color: $clr-secondary;
+    }
+}

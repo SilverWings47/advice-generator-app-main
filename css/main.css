@@ -1,0 +1,155 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  min-height: 100vh;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(218deg, 23%, 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.advice-container {
+  background-color: hsl(217deg, 19%, 24%);
+  width: 92%;
+  max-width: 31rem;
+  text-align: center;
+  padding-block: 2rem 4rem;
+  border-radius: 10px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .advice-container {
+    min-width: 5rem;
+    min-height: 250px;
+  }
+}
+.advice-container .advice-id {
+  color: #52ffa8;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+}
+.advice-container .advice-text {
+  color: hsl(193deg, 38%, 86%);
+  font-size: 1.5rem;
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .advice-container .advice-text {
+    font-size: 1.6rem;
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+.advice-container .advice-divider {
+  height: 20px;
+  background-image: url("../images/pattern-divider-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .advice-container .advice-divider {
+    background-image: url("../images/pattern-divider-desktop.svg");
+    max-width: 80%;
+    margin-inline: auto;
+    margin-top: 1rem;
+  }
+}
+.advice-container .advice-btn {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 50%;
+  background-color: #52ffa8;
+  background-image: url("../images/icon-dice.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .advice-container .advice-btn {
+    width: 60px;
+    height: 60px;
+    background-size: 40%;
+  }
+  .advice-container .advice-btn:is(:hover) {
+    box-shadow: 0px 0px 30px 1px rgba(82, 255, 169, 0.75);
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+}
+footer a {
+  color: #52ffa8;
+}

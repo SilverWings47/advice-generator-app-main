@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+// Colors
+
+$clr-primary : hsl(193, 38%, 86%);
+$clr-secondary : #52ffa8;
+
+$clr-neutral-100: hsl(217, 19%, 38%);
+$clr-neutral-400: hsl(217, 19%, 24%);
+$clr-neutral-700: hsl(218, 23%, 16%);
+
+// Fonts
+
+$fs-primary: 28px;
+
+$ff-primary: 'Manrope', sans-serif;
+
+$fw-primary: 800;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+}
+
+@mixin desktop {
+    @media (min-width: 768px) {
+        @content
+    }
+}
